@@ -42,3 +42,7 @@ Limitations
 - Only one receptor per emitter. This is intentional to keep the cost down.
 - Data can't currently be passed as parameters in callbacks.
 - Not header only.
+
+License
+-------
+The software is licensed under the MIT license. Feel free to extend it or include it in your own projects.
