@@ -25,7 +25,7 @@ Functor Emitter::Attach(Receptor& receptor, Functor callback)
    return std::bind(&Emitter::OnReceptorDetached, this);
 }
 
-void Emitter::Trigger() const
+void Emitter::operator()() const
 {
    if(m_CallbackFunctor)
       m_CallbackFunctor();

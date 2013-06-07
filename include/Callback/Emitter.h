@@ -23,7 +23,7 @@ namespace Callback
       //!
       //! Triggers the callback from Attach() if it exists. This will call the callback passed to the
       //! \ref Receptor::Receptor(Functor) "receptor constructor".
-      void Trigger() const;
+      void operator()() const;
 
    private:
       //! \brief Attach receptor to emitter.

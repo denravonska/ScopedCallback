@@ -32,7 +32,7 @@ TEST_CASE("Scope",
       }
 
       // This should be safe and the callback should not be called.
-      emitter.Trigger();
+      emitter();
       REQUIRE_FALSE(called);
    }
 
@@ -60,7 +60,7 @@ TEST_CASE("Emitter",
       Callback::Emitter emitter;
 
       receptor.AttachTo(emitter);
-      emitter.Trigger();
+      emitter();
       REQUIRE(called);
    }
 
@@ -76,9 +76,9 @@ TEST_CASE("Emitter",
 
       // Attach the receptors to the emitter and trigger callbacks.
       first.AttachTo(emitter);
-      emitter.Trigger();
+      emitter();
       second.AttachTo(emitter);
-      emitter.Trigger();
+      emitter();
       REQUIRE(firstCounter == 1);
       REQUIRE(secondCounter == 2);
    }
@@ -96,7 +96,7 @@ TEST_CASE("Receptor",
 
       receptor.AttachTo(emitter);
       receptor.Detach();
-      emitter.Trigger();
+      emitter();
       REQUIRE_FALSE(called);
    }
 }
