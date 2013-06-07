@@ -25,6 +25,6 @@ void Receptor::Detach()
    if(m_DetachFunctor)
    {
       m_DetachFunctor();
-      m_DetachFunctor = nullptr;
+      m_DetachFunctor = 0;
    }
 }

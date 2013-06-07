@@ -39,6 +39,6 @@ void Emitter::DetachReceptor()
 
 void Emitter::OnReceptorDetached()
 {
-   m_CallbackFunctor = nullptr;
-   m_DetachFunctor = nullptr;
+   m_CallbackFunctor = 0;
+   m_DetachFunctor = 0;
 }
